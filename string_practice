@@ -1,0 +1,20 @@
+26:- Program to convert String to a List 
+  Using split() method:- 
+
+# Python code to convert string to list
+  sp=input("Please enter the string:--")
+ li=list(sp.split(" "))
+ print(li)
+
+Method#2: Using string slicing
+
+str1='ABCD'
+list=[]
+list[:0]=str1
+print(list)
+
+Method #4: Using list comprehension 
+
+str2=input("Please enter string")
+x=[i for i in str2]
+print(x)
