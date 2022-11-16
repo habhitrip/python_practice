@@ -1,0 +1,34 @@
+Qus:- Why tuples consume less memory as compared to the list?
+Ans:- Test whether tuples are memory efficient.
+As tuples are stored in a single memory block therefore they don’t require extra space for new objects whereas the lists are allocated in two blocks, first the fixed one with all the Python object information and second a variable sized block for the data.
+
+example:- 
+import sys
+a_list = []
+a_tuple = ()
+a_list = ["Geeks", "For", "Geeks"]
+a_tuple = ("Geeks", "For", "Geeks")
+print(sys.getsizeof(a_list))
+print(sys.getsizeof(a_tuple))
+
+Qus:- Why in tuple implication of iteration is comparatively faster than list?
+Ans:- Test whether implication of iterations is comparatively faster in tuples
+As tuples are stored in a single memory block therefore they don’t require extra space for new objects as they are immutable whereas the lists are allocated in two blocks, first the fixed one with all the Python object information and second a variable sized block for the data which makes them even more faster.
+
+import sys, platform
+import time
+
+l=list(range(100000001))
+t=tuple(range(100000001))
+
+start = time.time_ns()
+for i in range(len(t)):
+	a = t[i]
+end = time.time_ns()
+print("Total lookup time for Tuple: ", end - start)
+
+start = time.time_ns()
+for i in range(len(l)):
+	a = l[i]
+end = time.time_ns()
+print("Total lookup time for LIST: ", end - start)
