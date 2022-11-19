@@ -18,6 +18,7 @@ As tuples are stored in a single memory block therefore they don’t require ext
 import sys, platform
 import time
 
+
 l=list(range(100000001))
 t=tuple(range(100000001))
 
